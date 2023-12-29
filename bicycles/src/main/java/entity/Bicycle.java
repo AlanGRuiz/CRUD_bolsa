@@ -12,7 +12,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @Data
 @Entity
-@Table(name = "PRUEBA")
+@Table(name = "bicycle")
 public class Bicycle implements Serializable{
 
     private static final long serialVersionUID = 1L; //hibernate??
@@ -24,7 +24,7 @@ public class Bicycle implements Serializable{
     @Column(name = "BICI")
     private String bici;
 
-    @Column(name = "CREACION")
-    private int anho_creacion;
+    @Column(name = "CONSTRUCTION")
+    private int year;
 
 }

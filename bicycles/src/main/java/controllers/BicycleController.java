@@ -1,7 +1,6 @@
 package controllers;
 
 import entity.Bicycle;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import services.IBicycleService;
 
@@ -10,8 +9,12 @@ import java.util.List;
 @RestController
 public class BicycleController{
 
-    @Autowired
+    final
     IBicycleService bicycleService;
+
+    public BicycleController(IBicycleService bicycleService) {
+        this.bicycleService = bicycleService;
+    }
 
     @GetMapping("/bicycles")
     public List<Bicycle> getAllBicycles(){
